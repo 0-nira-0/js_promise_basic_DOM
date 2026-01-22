@@ -28,5 +28,10 @@ const promise2 = new Promise((resolve, reject) => {
   }, 3000);
 });
 
-promise1.then(appendDiv(messageClass, successfulMessage));
-promise2.catch(appendDiv(errorMessageClasses, errorMessage));
+promise1
+  .then(() => appendDiv(messageClass, successfulMessage))
+  .catch(() => appendDiv(errorMessageClasses, errorMessage));
+
+promise2
+  .then(() => appendDiv(messageClass, successfulMessage))
+  .catch(() => appendDiv(errorMessageClasses, errorMessage));
