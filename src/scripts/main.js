@@ -4,7 +4,7 @@ const logo = document.querySelector('.logo');
 const body = document.querySelector('body');
 const errorMessage = 'Promise was rejected!';
 const successfulMessage = 'Promise was resolved!';
-const messageClass = 'message';
+const messageClass = ['message'];
 const errorMessageClasses = ['message', 'error-message'];
 
 function appendDiv(classList, message) {
